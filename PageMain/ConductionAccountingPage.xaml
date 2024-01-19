@@ -1,0 +1,130 @@
+﻿<Page x:Class="Barbershop.PageMain.ConductionAccountingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Barbershop.PageMain"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1000"
+      Title="Ведение учета">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        
+        <Image Source="/Image/SK.png" 
+               Grid.RowSpan="5" Stretch="Fill"/>
+        
+        <TextBlock Text="Выберите дату"
+                   FontSize="25"
+                   HorizontalAlignment="Left" 
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Center"/>
+
+        <DatePicker Name="ChoiceDP"
+                    Grid.Row="0"
+                    Height="40"
+                    Width="300"
+                    HorizontalAlignment="Center"
+                    FontSize="25"/>
+
+        <TextBlock Text="Выберите сотрудника"
+                   Grid.Row="1"
+                   FontSize="25"
+                   HorizontalAlignment="Left" 
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Center"/>
+
+        <ComboBox Name="EmployeeCmb"
+                  Grid.Row="1"
+                  FontSize="20"
+                  HorizontalAlignment="Center" 
+                  VerticalAlignment="Center" 
+                  Width="394"
+                  Height="55"/>
+
+        <TextBlock Text="Выберите производителя"
+                   Grid.Row="2"
+                   FontSize="25"
+                   HorizontalAlignment="Left" 
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Center"/>
+
+        <ComboBox Name="ManufacturerCmb"
+                  Grid.Row="2"
+                  FontSize="20"
+                  HorizontalAlignment="Center" 
+                  VerticalAlignment="Center" 
+                  Width="394"
+                  Height="55"
+                  SelectionChanged="ManufacturerCmb_SelectionChanged"/>
+
+        <TextBlock Text="Выберите материал"
+                   Grid.Row="3"
+                   FontSize="25"
+                   HorizontalAlignment="Left" 
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Center"/>
+
+        <ComboBox Name="MaterialCmb"
+                  Grid.Row="3"
+                  FontSize="20"
+                  HorizontalAlignment="Center" 
+                  VerticalAlignment="Center" 
+                  Width="394"
+                  Height="55"/>
+
+        <Grid Grid.Row="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.86*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Введите цену"
+                   FontSize="25"
+                   HorizontalAlignment="Left" 
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Center"/>
+
+            <TextBox Name="CostTb" 
+                 FontSize="20"
+                 HorizontalAlignment="Right"
+                 Height="50" 
+                 TextWrapping="Wrap" 
+                 Width="300"/>
+
+            <TextBlock Text="Введите количество"
+                   Grid.Column="1"
+                   FontSize="25"
+                   HorizontalAlignment="Left" 
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Center"/>
+
+            <TextBox Name="AmountTb" 
+                 Grid.Column="1"
+                 FontSize="20"
+                 HorizontalAlignment="Right"
+                 Height="50" 
+                 TextWrapping="Wrap" 
+                 Width="300"/>
+
+            <Button Content="Добавить"
+                Name="AddBtn"
+                FontSize="20"
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalAlignment="Center"  
+                Width="200" Height="50"
+                Click="AddBtn_Click"/>
+        </Grid>
+    </Grid>
+</Page>

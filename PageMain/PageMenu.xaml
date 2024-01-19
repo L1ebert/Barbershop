@@ -1,0 +1,68 @@
+﻿<Page x:Class="Barbershop.PageMain.PageMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Barbershop.PageMain"
+      mc:Ignorable="d" 
+      d:DesignHeight="769" d:DesignWidth="300"
+      Title="PageMenu">
+
+    <Grid>
+        <Image Source="/Image/SK2.png" Stretch="Fill"/>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0.5"
+                    Height="769"
+                    Width="300">
+
+            <TextBlock Height="70">
+                <Hyperlink Name="HL1"
+                           FontSize="25"
+                           Click="HL1_Click">
+                    <Run Text="Добавить производителя"/>
+                </Hyperlink>
+            </TextBlock>
+
+            <TextBlock Height="70">
+                <Hyperlink Name="HL2"
+                           FontSize="25"
+                           Click="HL2_Click">
+                    <Run Text="Добавить тариф"/>
+                </Hyperlink>
+            </TextBlock>
+
+            <TextBlock Height="70">
+                <Hyperlink Name="HL3"
+                           FontSize="25"
+                           Click="HL3_Click">
+                    <Run Text="Добавить сотрудника"/>
+                </Hyperlink>
+            </TextBlock>
+
+            <TextBlock Height="70">
+                <Hyperlink Name="HL4"
+                           FontSize="25"
+                           Click="HL4_Click">
+                    <Run Text="Введение учета"/>
+                </Hyperlink>
+            </TextBlock>
+
+            <TextBlock Height="70">
+                <Hyperlink Name="HL5"
+                           FontSize="25"
+                           Click="HL5_Click">
+                    <Run Text="Отчет по сотруднику"/>
+                </Hyperlink>
+            </TextBlock>
+
+            <TextBlock Height="70">
+                <Hyperlink Name="HL6"
+                           FontSize="25"
+                           Click="HL6_Click">
+                    <Run Text="Отчет по периоду"/>
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>

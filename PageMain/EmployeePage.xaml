@@ -1,0 +1,36 @@
+﻿<Page x:Class="Barbershop.PageMain.EmployeePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Barbershop.PageMain"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1000"
+      Title="Добавить сотрудника">
+    <Grid>
+        <Image Source="/Image/SK.png" Stretch="Fill" />
+
+
+        <TextBox Name="NameEmployeeTb" 
+                 VerticalAlignment="Center"
+                 FontSize="20"
+                 Grid.Row="1"
+                 Height="50" 
+                 Width="394"/>
+
+        <TextBlock Text="Введите имя работника"
+                   FontSize="25"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center" 
+                   TextWrapping="Wrap" Margin="366,317,362,0"/>
+
+        <Button Content="Добавить"
+                FontSize="20"
+                Name="AddEmployeeBtn"  
+                VerticalAlignment="Bottom"
+                Width="200" 
+                Height="50"
+                Click="AddEmployeeBtn_Click"
+                Margin="413,0,387,282"/>
+    </Grid>
+</Page>  

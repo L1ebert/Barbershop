@@ -1,0 +1,72 @@
+﻿<Page x:Class="Barbershop.PageMain.AccountingPeriodPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Barbershop.PageMain"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1000"
+      Title="Oтчет по периоду">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Image Source="/Image/SK.png" Stretch="Fill"
+               Grid.RowSpan="4"/>
+
+        <TextBlock Text="Выберите начало периода"
+                   FontSize="25"
+                   Grid.Row="1"
+                   HorizontalAlignment="Left" 
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top"/>
+
+        <DatePicker Name="ChoiceBeginningDP"
+                    Grid.Row="1"
+                    Height="40"
+                    Width="300"
+                    HorizontalAlignment="Left"
+                    FontSize="25"/>
+        
+        <TextBlock Text="Выберите конец периода"
+                   FontSize="25"
+                   HorizontalAlignment="Right" 
+                   TextWrapping="Wrap"
+                   Grid.Row="1"
+                   VerticalAlignment="Top"/>
+
+        <DatePicker Name="ChoiceEndDP"
+                    Grid.Row="1"
+                    Height="40"
+                    Width="300"
+                    HorizontalAlignment="Right"
+                    FontSize="25"/>
+
+        <DataGrid Name="AccDG"
+                  AutoGenerateColumns="False"
+                  FontSize="20"
+                  Grid.Row="2"
+                  Loaded="AccDG_Loaded">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Дата выдачи" Binding="{Binding Datelspol, StringFormat=dd.MM.yyyy}"/>
+                <DataGridTextColumn Header="Сотрудник" Binding="{Binding Employee.Name}" />
+                <DataGridTextColumn Header="Товар" Binding="{Binding Material.Name}"/>
+                <DataGridTextColumn Header="Производитель" Binding="{Binding Material.Manufacturer.Name}"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price, StringFormat={}{0:F2} ₽}"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding Amount, StringFormat={}{0:F2} ₽}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Сформировать учет"
+                Name="AddAccountingBtn"
+                FontSize="20"
+                Grid.Row="3"
+                HorizontalAlignment="Center"  
+                Width="230" Height="50"
+                Click="AddAccountingBtn_Click"/>
+    </Grid>
+</Page>
