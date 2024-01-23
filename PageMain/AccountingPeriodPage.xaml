@@ -61,6 +61,7 @@
                 <DataGridTextColumn Header="Сумма" Binding="{Binding Amount, StringFormat={}{0:F2} ₽}"/>
             </DataGrid.Columns>
         </DataGrid>
+        
         <Button Content="Сформировать учет"
                 Name="AddAccountingBtn"
                 FontSize="20"
