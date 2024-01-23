@@ -81,7 +81,7 @@ namespace Barbershop.PageMain
         private void ManufacturerCmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int selectedManufacturer = Convert.ToInt32(ManufacturerCmb.SelectedValue);
-            ManufacturerCmb.ItemsSource = App.context.Material.Where(m => m.Manufacturer.ID == selectedManufacturer).ToList();
+            MaterialCmb.ItemsSource = App.context.Material.Where(m => m.Manufacturer.ID == selectedManufacturer).ToList();
         }
     }
 }

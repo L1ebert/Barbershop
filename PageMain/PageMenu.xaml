@@ -28,7 +28,7 @@
                 <Hyperlink Name="HL2"
                            FontSize="25"
                            Click="HL2_Click">
-                    <Run Text="Добавить тариф"/>
+                    <Run Text="Добавить товар"/>
                 </Hyperlink>
             </TextBlock>
 
