@@ -24,10 +24,9 @@ namespace Barbershop.PageMain
         {
             InitializeComponent();
         }
-        private void AccDG_Loaded(object sender, RoutedEventArgs e)
-        {
-            AccDG.ItemsSource = App.context.Accounting.ToList();
-        }
+       
+            
+        
 
         private void AddAccountingBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -45,7 +44,14 @@ namespace Barbershop.PageMain
 
             var a = (DateTime)ChoiceBeginningDP.SelectedDate;
             var b = (DateTime)ChoiceEndDP.SelectedDate;
-            AccDG.ItemsSource = App.context.Accounting.Where(x => x.Datelspol >= a && x.Datelspol <= b).ToList();
+
+            var qwery = App.context.View_1.
+                Where(x => x.Datelspol >= a && x.Datelspol <= b). //
+                GroupBy(y => y.Name). //Группируем
+                Select(g => new { Сотрудник = g.Key, Сумма = g.Sum(s => s.Summa) }). //Устанавливаем
+                OrderBy(n => n.Сотрудник); //Обьявляем
+
+            AccDG.ItemsSource = qwery.ToList();
         }
     }
 }

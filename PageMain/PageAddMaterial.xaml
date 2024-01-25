@@ -36,7 +36,7 @@
                    TextWrapping="Wrap"
                    VerticalAlignment="Top"/>
 
-        <TextBlock Text="выберите производителя товара"
+        <TextBlock Text="Выберите производителя товара"
                    FontSize="20"
                    HorizontalAlignment="Left" 
                    Margin="116,191,0,0" 

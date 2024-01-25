@@ -47,19 +47,10 @@
                     FontSize="25"/>
 
         <DataGrid Name="AccDG"
-                  AutoGenerateColumns="False"
                   FontSize="20"
                   Grid.Row="2"
-                  Loaded="AccDG_Loaded">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Дата выдачи" Binding="{Binding Datelspol, StringFormat=dd.MM.yyyy}"/>
-                <DataGridTextColumn Header="Сотрудник" Binding="{Binding Employee.Name}" />
-                <DataGridTextColumn Header="Товар" Binding="{Binding Material.Name}"/>
-                <DataGridTextColumn Header="Производитель" Binding="{Binding Material.Manufacturer.Name}"/>
-                <DataGridTextColumn Header="Цена" Binding="{Binding Price, StringFormat={}{0:F2} ₽}"/>
-                <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}"/>
-                <DataGridTextColumn Header="Сумма" Binding="{Binding Amount, StringFormat={}{0:F2} ₽}"/>
-            </DataGrid.Columns>
+                  Height="300"
+                  Width="300">
         </DataGrid>
         
         <Button Content="Сформировать учет"
