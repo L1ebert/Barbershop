@@ -12,7 +12,7 @@
         <AssociationConnector Association="FrolovaTolmachevBarbershopModel.FK_Accounting_Employee" ManuallyRouted="false" />
         <AssociationConnector Association="FrolovaTolmachevBarbershopModel.FK_Accounting_Material" ManuallyRouted="false" />
         <AssociationConnector Association="FrolovaTolmachevBarbershopModel.FK_Material_Manufacturer" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="FrolovaTolmachevBarbershopModel.View_1" Width="1.5" PointX="7.875" PointY="1.875" />
+        <EntityTypeShape EntityType="FrolovaTolmachevBarbershopModel.View_1" Width="1.5" PointX="1.25" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

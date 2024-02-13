@@ -24,10 +24,6 @@ namespace Barbershop.PageMain
         {
             InitializeComponent();
         }
-       
-            
-        
-
         private void AddAccountingBtn_Click(object sender, RoutedEventArgs e)
         {
             string mes = "";
@@ -49,7 +45,7 @@ namespace Barbershop.PageMain
                 Where(x => x.Datelspol >= a && x.Datelspol <= b). //
                 GroupBy(y => y.Name). //Группируем
                 Select(g => new { Сотрудник = g.Key, Сумма = g.Sum(s => s.Summa) }). //Устанавливаем
-                OrderBy(n => n.Сотрудник); //Обьявляем
+                OrderBy(n => n.Сотрудник); //Сортируем
 
             AccDG.ItemsSource = qwery.ToList();
         }
